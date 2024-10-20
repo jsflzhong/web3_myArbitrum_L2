@@ -1,0 +1,24 @@
+l2:
+  chainId: 42161  # Arbitrum One的链ID
+  gasPrice: 0     # L2交易默认的gas价格
+  blockTime: 2    # L2每个区块的时间（秒）
+  
+sequencer:
+  enabled: true   # 是否启用Sequencer
+  privKey: <your-sequencer-private-key> # Sequencer节点的私钥
+
+l1:
+  url: <your-L1-node-url> # L1节点的URL地址
+  privateKey: <your-private-key> # L1上用来管理链的私钥
+
+rollup:
+  inboxAddress: <L1-inbox-address> # Arbitrum Rollup智能合约的Inbox地址
+  outboxAddress: <L1-outbox-address> # Rollup合约的Outbox地址
+
+db:
+  path: ./db # 数据库存储路径
+  cache: 512 # 缓存大小（MB）
+
+logging:
+  level: info # 日志级别，可选info, debug, warn
+  file: /path/to/logfile.log  # 日志文件路径
